@@ -159,11 +159,11 @@ Mapping and analyzing roadway inventory, attributes, conditions, and usage, of t
 
 Load in GIS software (QGIS, ArcGIS) or programmatically (GeoPandas, sf in R).
 Typical R example:
-    library(sf)
-    sf <- st_read("2024_HPMS_FS1.geojson")
+   - library(sf)
+   - sf <- st_read("2024_HPMS_FS1.geojson")
 Typical Python (GeoPandas) example:
-    import geopandas as gpd
-    gdf = gpd.read_file("2024_HPMS_FS1.geojson")
+   - import geopandas as gpd
+   - gdf = gpd.read_file("2024_HPMS_FS1.geojson")
 
 # Known limitations & caveats
 - SRID selection: the script uses the first non-NA SRID found in the SRID column; if multiple SRIDs are present across rows results may not be consistent. Validate SRID consistency before using geometry for precise analysis.
@@ -204,4 +204,5 @@ If you use these HPMS data files in a publication, report, or presentation, plea
 	U.S. Federal Highway Administration, Office of Highway Policy Information. 2025. "2024_HPMS_FS1.geojson." Version 2024_HPMS_FS1 v1. U.S. Federal Highway Administration. Generated October 1, 2025. Public domain. SHA-256: eeac2ad4cd3e4d187cbe5aed51b968db7b93ae9194a8fdec79610db79ec9ae4d. (Accessed [Month Day, Year]).
 
 # License
+
 Public Domain U.S. Government (http://www.usa.gov/publicdomain/label/1.0/). All data contained in the described file are in the public domain and may be used without special permission; citation as to source is required.
