@@ -158,12 +158,14 @@ The SQL in the script explicitly casts many fields to integer, decimal, or varch
 Mapping and analyzing roadway inventory, attributes, conditions, and usage, of the Interstate system.  The sample data are included and can be expanded and analyzed where full-extent data are not available. It is recommended that the user consult the HPMS Field Manual on how to do this, or reach out to the FHWA, Office of Highway Policy Information for assistance. It is generally, not advised to compare states, especially using the sampled data items since the collection and reporting of these data can vary from state to state.
 
 Load in GIS software (QGIS, ArcGIS) or programmatically (GeoPandas, sf in R).
+
 Typical R example:
-   - library(sf)
-   - sf <- st_read("2024_HPMS_FS1.geojson")
+- library(sf)
+- sf <- st_read("2024_HPMS_FS1.geojson")
+
 Typical Python (GeoPandas) example:
-   - import geopandas as gpd
-   - gdf = gpd.read_file("2024_HPMS_FS1.geojson")
+- import geopandas as gpd
+- gdf = gpd.read_file("2024_HPMS_FS1.geojson")
 
 # Known limitations & caveats
 - SRID selection: the script uses the first non-NA SRID found in the SRID column; if multiple SRIDs are present across rows results may not be consistent. Validate SRID consistency before using geometry for precise analysis.
@@ -206,3 +208,4 @@ If you use these HPMS data files in a publication, report, or presentation, plea
 # License
 
 Public Domain U.S. Government (http://www.usa.gov/publicdomain/label/1.0/). All data contained in the described file are in the public domain and may be used without special permission; citation as to source is required.
+
